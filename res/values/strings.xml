@@ -14,6 +14,9 @@
     <string name="eventconfigtextView">Event Configurationt</string>
     <string name="event_configEventName">Event Name</string>
     <string name="event_configDescription">Description</string>
+    <string name="event_configWhen">When?</string>
+    <string name="event_configWhere">Where?</string>
+    <string name="event_configAddPeople">Add People</string>
     <string-array name="gender">
         <item/>
         <item>Male</item>

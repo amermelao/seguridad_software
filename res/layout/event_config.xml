@@ -103,6 +103,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton" android:contentDescription="@string/eventconfigtextView"
-                android:background="@drawable/ic_launcher"/>
+                android:background="@android:drawable/ic_menu_add"/>
     </LinearLayout>
 </RelativeLayout>

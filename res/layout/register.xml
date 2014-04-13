@@ -20,19 +20,19 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextName"/>
+                android:id="@+id/registerName" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextName"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberSigned"
                 android:ems="10"
-                android:id="@+id/editText2" android:layout_gravity="right" android:hint="@string/registerEditTextAge"/>
+                android:id="@+id/registerAge" android:layout_gravity="right" android:hint="@string/registerEditTextAge"/>
         <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner" android:layout_gravity="center_horizontal" android:clickable="true"
+                android:id="@+id/registergender" android:layout_gravity="center_horizontal" android:clickable="true"
                 android:gravity="center" android:spinnerMode="dialog"
-                android:entries="@array/sex"/>
+                android:entries="@array/gender"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,26 +44,26 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editText3" android:layout_gravity="center_horizontal"
+                android:id="@+id/registermail" android:layout_gravity="center_horizontal"
                 android:hint="@string/registerEditTextMail"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editText7" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextReMail"/>
+                android:id="@+id/registerConfirmMail" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextReMail"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText4" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextPass"/>
+                android:id="@+id/registerPass" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextPass"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText5" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextRePass"/>
+                android:id="@+id/registerConfirmPass" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextRePass"/>
     </LinearLayout>
     <Button
             android:layout_width="wrap_content"

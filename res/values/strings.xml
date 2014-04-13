@@ -11,6 +11,7 @@
     <string name="registerButtonNameCUsr">Create User</string>
     <string name="registerTextView2Label">User Information</string>
     <string name="registerTextViewLabelUs">Account Information</string>
+    <string name="eventconfigtextView">Event Configurationt</string>
     <string-array name="gender">
         <item/>
         <item>Male</item>

@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Groups Organizer</string>
+    <string name="registerEditTextName">Enter Name</string>
+    <string name="registerEditTextAge">Enter age</string>
+    <string name="registerEditTextUsrLog">User login</string>
+    <string name="registerEditTextMail">E-mail</string>
+    <string name="registerEditTextReMail">Confirm E-mail</string>
+    <string name="registerEditTextPass">Password</string>
+    <string name="registerEditTextRePass">Confirm Password</string>
+    <string name="registerButtonNameCUsr">Create User</string>
+    <string name="registerTextView2Label">User Information</string>
+    <string name="registerTextViewLabelUs">Account Information</string>
+    <string-array name="sex">
+        <item/>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>

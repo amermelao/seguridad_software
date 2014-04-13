@@ -1,8 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-</LinearLayout>
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:gravity="center" android:id="@+id/linearLayout">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/registerTextView2Label"
+                android:id="@+id/textView2" android:layout_gravity="center_horizontal"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextName"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:ems="10"
+                android:id="@+id/editText2" android:layout_gravity="right" android:hint="@string/registerEditTextAge"/>
+        <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner" android:layout_gravity="center_horizontal" android:clickable="true"
+                android:gravity="center" android:spinnerMode="dialog"
+                android:entries="@array/sex"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/registerTextViewLabelUs"
+                android:id="@+id/textView" android:layout_gravity="center_horizontal"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/editText3" android:layout_gravity="center_horizontal"
+                android:hint="@string/registerEditTextMail"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/editText7" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextReMail"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editText4" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextPass"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editText5" android:layout_gravity="center_horizontal" android:hint="@string/registerEditTextRePass"/>
+    </LinearLayout>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerButtonNameCUsr"
+            android:id="@+id/button" android:layout_gravity="center_horizontal|right"
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"
+            android:layout_marginLeft="210dp" android:layout_marginBottom="80dp"/>
+</RelativeLayout>

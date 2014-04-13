@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Evento 1"
+            android:id="@+id/eventRowTextEventName" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+            android:layout_margin="5dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="4th street 455"
+            android:id="@+id/eventRowTextLocation" android:layout_below="@+id/eventRowTextEventName" android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="15"
+            android:id="@+id/eventRowTextConfirmed"
+            android:layout_alignParentTop="true" android:layout_alignParentEnd="true" android:layout_margin="5dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="80"
+            android:id="@+id/eventRowTextInvited"
+            android:layout_alignParentTop="false" android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" android:layout_margin="5dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Confirmed: "
+            android:id="@+id/textView"
+            android:layout_alignTop="@+id/eventRowTextConfirmed" android:layout_toLeftOf="@+id/eventRowTextConfirmed"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Invited: "
+            android:id="@+id/textView2" android:layout_alignTop="@+id/eventRowTextInvited"
+            android:layout_toLeftOf="@+id/eventRowTextInvited"/>
+</RelativeLayout>

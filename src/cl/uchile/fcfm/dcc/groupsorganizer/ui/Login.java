@@ -1,5 +1,6 @@
 package cl.uchile.fcfm.dcc.groupsorganizer.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -20,14 +21,15 @@ public class Login extends CustomFragmentActivity {
     }
 
     public void onLoginClick(View v) {
-        if(tvUser.getText().length() == 0 || tvPassword.getText().length() == 0) {
+        doLoginVerified();
+        /*if(tvUser.getText().length() == 0 || tvPassword.getText().length() == 0) {
             Toast.makeText(this, "Usuario y/o contraseña no válidos", Toast.LENGTH_SHORT).show();
             return;
         }
         LoginConnection loginConnection = new LoginConnection(this, this);
         loginConnection.setUserName(tvUser.getText().toString());
         loginConnection.setUserName(tvPassword.getText().toString());
-        runTask(loginConnection);
+        runTask(loginConnection);*/
     }
 
     @Override
@@ -41,6 +43,7 @@ public class Login extends CustomFragmentActivity {
     }
 
     private void doLoginVerified() {
-
+        Intent intent = new Intent(this, PagerViewHost.class);
+        startActivity(intent);
     }
 }

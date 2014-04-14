@@ -11,8 +11,8 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
-import cl.uchile.fcfm.dcc.groupsorganizer.cl.uchile.fcfm.dcc.groupsorganizer.data.AdminPreferencias;
 import cl.uchile.fcfm.dcc.groupsorganizer.connection.TareaAsincrona;
+import cl.uchile.fcfm.dcc.groupsorganizer.data.AdminPreferencias;
 
 import java.text.SimpleDateFormat;
 import java.util.*;

@@ -4,56 +4,41 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.util.Base64;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import cl.uchile.fcfm.dcc.groupsorganizer.R;
-import cl.uchile.fcfm.dcc.groupsorganizer.cl.uchile.fcfm.dcc.groupsorganizer.data.AdminPreferencias;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map.Entry;
+import cl.uchile.fcfm.dcc.groupsorganizer.controller.EventAdapter;
+import cl.uchile.fcfm.dcc.groupsorganizer.data.AdminPreferencias;
+import cl.uchile.fcfm.dcc.groupsorganizer.data.Event;
 
 /**
  * Created by Ian on 13-04-2014.
  */
 public class PublicEvents extends ListFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
-    private Spinner mAreaSpinner;
     public boolean bloquearUpdateSpinner;
-
+    private Spinner mAreaSpinner;
     private TextView alcalde, SecMun, administrador, secPlac, concejales;
     private ImageView imagenPrincipal;
 
-    private class Area {
-        public Area(int codigo, String nombre) {
-            this.codigo = codigo;
-            this.nombre = nombre;
-        }
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Event[] data = new Event[3];
+        //TODO: Fake data: delete
+        for (int i = 0; i < 3; i++)
+            data[i] = new Event("Evento " + i, "Santa Rosa", "30", "5");
 
-        public int getCodigo() {
-            return codigo;
-        }
-
-        public String toString() {
-            return nombre;
-        }
-
-        String nombre;
-        int codigo;
+        EventAdapter adapter = new EventAdapter(getActivity(), R.layout.event_row, data);
+        setListAdapter(adapter);
     }
 
     /**
      * The Fragment's UI is just a simple text view showing its instance number.
      */
-    @Override
+    /*@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.events_list, container, false);
 
@@ -75,7 +60,7 @@ public class PublicEvents extends ListFragment implements SharedPreferences.OnSh
 
 
         return v;
-    }
+    }*/
 
     private void mostrarImagenBase64(String base64) {
         byte[] decodedString = Base64.decode(base64, Base64.DEFAULT);
@@ -154,5 +139,23 @@ public class PublicEvents extends ListFragment implements SharedPreferences.OnSh
             administrador.setText("Provincia: No hay datos");
             secPlac.setText("No hay datos");
         } else concejales.setText("No hay datos");
+    }
+
+    private class Area {
+        String nombre;
+        int codigo;
+
+        public Area(int codigo, String nombre) {
+            this.codigo = codigo;
+            this.nombre = nombre;
+        }
+
+        public int getCodigo() {
+            return codigo;
+        }
+
+        public String toString() {
+            return nombre;
+        }
     }
 }

@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
                         android:ems="10"
-                        android:id="@+id/editText" android:layout_column="3"/>
+                        android:id="@+id/registerCpnfirmMail" android:layout_column="3"/>
             </TableRow>
             <TableRow
                     android:layout_width="fill_parent"
@@ -140,7 +140,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/registerButtonNameCUsr"
-            android:id="@+id/button" android:layout_gravity="right"
+            android:onClick="okInfo"
+            android:id="@+id/registerButton" android:layout_gravity="right"
             android:layout_alignParentTop="false" android:layout_alignEnd="@+id/linearLayout"
             android:layout_alignParentBottom="true" android:layout_marginBottom="20dp"/>
 </RelativeLayout>

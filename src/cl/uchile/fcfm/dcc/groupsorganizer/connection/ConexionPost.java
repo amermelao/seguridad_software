@@ -4,14 +4,19 @@ import android.content.Context;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.ClientContext;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
+import org.apache.http.protocol.BasicHttpContext;
+import org.apache.http.protocol.HttpContext;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -37,6 +42,11 @@ public class ConexionPost extends Conexion {
 	 */
 	HttpParams params;
 
+    /**
+     * Contexto con cookies realizar la transacción Http.
+     */
+    HttpContext httpContext;
+
 	/**
 	 * Constructor que especifica un tiempo de timout para las peticiones http
 	 * 
@@ -44,10 +54,14 @@ public class ConexionPost extends Conexion {
 	 *            contexto de la aplicación que usará la conexión para usar el
 	 *            servicio ConnectivityManager
 	 */
+
 	
 	public ConexionPost(Context context) {
 		super(context);
 		httpClient = new DefaultHttpClient();
+        CookieStore cookieStore = new BasicCookieStore();
+        httpContext = new BasicHttpContext();
+        httpContext.setAttribute(ClientContext.COOKIE_STORE, cookieStore);
 		params = new BasicHttpParams();
 		HttpConnectionParams.setConnectionTimeout(params, 5000);
 		HttpConnectionParams.setSoTimeout(params, 7000);
@@ -77,7 +91,7 @@ public class ConexionPost extends Conexion {
 		httpPost.setEntity(new UrlEncodedFormEntity(valoresPost));
 		httpClient.getParams().setBooleanParameter(
 				"http.protocol.expect-continue", false);
-		HttpResponse respuesta = httpClient.execute(httpPost);
+		HttpResponse respuesta = httpClient.execute(httpPost, httpContext);
 		HttpEntity entity = respuesta.getEntity();
 		is = entity.getContent();
 		return toStringResponse(is);

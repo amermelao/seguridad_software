@@ -1,4 +1,4 @@
-package cl.uchile.fcfm.dcc.groupsorganizer.connection.tasks;
+package cl.uchile.fcfm.dcc.groupsorganizer.conection;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -31,7 +31,7 @@ public abstract class HttpConnection {
 
 	protected abstract String getUrl();
 
-	public void get(RequestParams params, AsyncHttpResponseHandler responseHandler) {
+	public void go(RequestParams params, AsyncHttpResponseHandler responseHandler) {
 		mRequestHandle = getClient().post(getAbsoluteUrl(getUrl()), params, responseHandler);
 	}
 }

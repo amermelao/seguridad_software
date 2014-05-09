@@ -1,4 +1,4 @@
-package cl.uchile.fcfm.dcc.groupsorganizer.connection.tasks;
+package cl.uchile.fcfm.dcc.groupsorganizer.conection;
 
 import com.loopj.android.http.AsyncHttpClient;
 

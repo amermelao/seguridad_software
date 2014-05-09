@@ -1,6 +1,7 @@
 package cl.uchile.fcfm.dcc.groupsorganizer.app;
 
 import android.app.Application;
+
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.PersistentCookieStore;
 

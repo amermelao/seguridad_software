@@ -9,6 +9,7 @@ public abstract class CustomFragmentActivity extends FragmentActivity {
 
 	public AsyncHttpClient getHttpClient() {
 		return ((GroupsOrganizerApp)getApplication()).getAsyncHttpClient();
+
 	}
 	
 

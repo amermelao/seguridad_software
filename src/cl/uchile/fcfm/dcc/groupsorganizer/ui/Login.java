@@ -2,6 +2,7 @@ package cl.uchile.fcfm.dcc.groupsorganizer.ui;
 
 import org.apache.http.Header;
 
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ public class Login extends CustomFragmentActivity {
         setContentView(R.layout.main);
 
         tvUser = (TextView) findViewById(R.id.user);
+
         tvPassword = (TextView) findViewById(R.id.pass);
     }
 

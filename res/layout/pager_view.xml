@@ -30,7 +30,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/pagerViewButtonProfile" android:layout_centerVertical="true"
                     android:src="@android:drawable/ic_menu_manage"
-                    android:layout_alignParentEnd="true"/>
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onSettingsPressed"/>
             <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

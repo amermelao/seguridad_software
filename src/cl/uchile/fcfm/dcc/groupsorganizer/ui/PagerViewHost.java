@@ -1,6 +1,7 @@
 package cl.uchile.fcfm.dcc.groupsorganizer.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
@@ -346,6 +347,12 @@ public class PagerViewHost extends CustomFragmentActivity implements
                 return v;
             }
         }
+
+    }
+
+    public void onSettingsPressed(View v){
+        Intent settingsIntend = new Intent(this,Register.class);
+        startActivity(settingsIntend);
     }
 
 }

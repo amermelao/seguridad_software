@@ -11,7 +11,7 @@
     <uses-sdk android:minSdkVersion="19"/>
     <application android:label="@string/app_name" android:icon="@drawable/app_icon"
                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <activity android:name=".ui.Register"
+        <activity android:name=".ui.Login"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -19,5 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.PagerViewHost"/>
+        <activity android:name=".ui.Register"/>
     </application>
 </manifest>

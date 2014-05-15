@@ -1,6 +1,5 @@
 package cl.uchile.fcfm.dcc.groupsorganizer.ui;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +11,7 @@ import cl.uchile.fcfm.dcc.groupsorganizer.R;
 /**
  * Created by Roberto
  */
-public class Register extends Activity {
+public class Register extends CustomFragmentActivity {
 
     EditText mUserName,
             mUserAge,
@@ -42,8 +41,6 @@ public class Register extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-
-        finish();
     }
 
     @Override

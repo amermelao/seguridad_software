@@ -40,6 +40,18 @@ public class Register extends Activity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+        finish();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
     }

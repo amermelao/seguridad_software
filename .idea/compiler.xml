@@ -18,6 +18,9 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="Groups Organizer" target="" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
